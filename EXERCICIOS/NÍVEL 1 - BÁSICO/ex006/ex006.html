@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px
+        }
+        div {
+            background-color: rgb(241, 241, 241);
+            width: 160px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 3px;
+        }
+        div:hover {
+            background-color: rgb(224, 224, 224);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <div id="caixa">Clique aqui</div>
+    <p id="texto">O resultado vem aqui</p>
+    <script>
+        var a = window.document.querySelector('div#caixa')
+        a.addEventListener('click', clicar)
+        function clicar() {
+            var n1 = window.prompt('Digite um número')
+            var n2 = window.prompt('Digite outro número')
+            var numero1 = parseInt(n1)
+            var numero2 = parseInt(n2)
+            var novotexto = window.document.querySelector('p#texto')
+            novotexto.innerText = `A soma entre ${numero1} e ${numero2} é ${numero1+numero2}`
+        }
+    </script>
+</body>
+</html>

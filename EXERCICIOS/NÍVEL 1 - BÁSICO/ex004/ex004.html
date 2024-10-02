@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX004</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px
+        }
+        div {
+            background-color: rgb(241, 241, 241);
+            width: 210px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div:hover {
+            background-color: rgb(224, 224, 224);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v2.0</h1>
+    <div id="caixa">Clique para começar</div>
+    <p id="texto">Aqui vai aparecer o resultado</p>
+    
+    <script>
+        var a = window.document.querySelector('div#caixa')
+        a.addEventListener('click', clicar)
+        function clicar() {
+            var nome= window.prompt('Qual seu nome?')
+            var b = window.document.querySelector('p#texto')
+            b.innerText = `Agora sim ${nome}!!!`
+        }
+    </script>
+</body>
+</html>

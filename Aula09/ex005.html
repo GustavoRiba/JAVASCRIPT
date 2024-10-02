@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(114, 114, 255);
+            color: rgb(255, 255, 255);
+            font: normal arial 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em javascript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'MUDOU'
+        */
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'black'
+    </script>
+</body>
+</html>
+<!-- 
+    DOM: Documento Objective Model 
+    Arvore DOM: Window
+        - Location
+        - Document
+            - HTML 
+                - Head
+                - Body
+        - History 
+    
+    Metodos de selecionar objetos DOM
+        Marca: getElementsByTagName() []
+        ID: getElementById()
+        Nome: getElementsByName() []
+        Classe: getElementsByClassName() []
+        Seletor: querySelector('div(# se for id ou . se for class)'
+--> 

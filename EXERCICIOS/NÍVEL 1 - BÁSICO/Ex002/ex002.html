@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com um botão</title>
+    <style>
+       h1{
+        font: arial 20px;
+       }
+       div {
+            background: rgb(236, 236, 236);
+            color: black;
+            height: 80px;
+            width: 163px;
+            text-align: center;
+            line-height: 80px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 3px;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com botões</h1>
+    <div id="bloco">Clica em mim!</div>
+    <script>
+        var a = window.document.querySelector('div#bloco')
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('click', clicar)
+        function entrar() {
+            a.innerText = 'Entrou'
+            a.style.background = 'Green'
+        }
+        function sair () {
+            a.innerText = 'Saiu. Volte e clique!'
+            a.style.background = 'yellow'
+        }
+        function clicar() {
+            window.alert('Clicou!')
+        }
+    </script>
+</body>
+</html>

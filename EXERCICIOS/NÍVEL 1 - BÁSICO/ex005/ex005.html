@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px
+        }
+        div {
+            background-color: rgb(241, 241, 241);
+            width: 210px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 3px;
+        }
+        div:hover {
+            background-color: rgb(224, 224, 224);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <div id="caixa">Clique para calcular</div>
+    <p id="result">O resultado vem aqui...</p>
+    <script>
+        window.alert('Seja bem vindo :)')
+        var a = window.document.querySelector('div#caixa')
+        a.addEventListener('click', clicar)
+        function clicar () {
+            var nume = window.prompt('Digite um número!')
+            var texto = window.document.querySelector('p#result')
+            texto.innerHTML = `o dobro de ${nume} é ${nume*2} e a metade é ${nume/2}`
+        }
+    </script>
+</body>
+</html>

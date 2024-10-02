@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: grey;
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px; /*altura*/
+            line-height: 200px; /*altura da linha*/
+            text-align: center; /*posição da linha*/
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--function ação()-->
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'green'
+        } // function ação() { bloco }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'yellow'
+            a.style.color = 'black'
+        } // function ação() { bloco }
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'red'
+        } // function ação() { bloco }
+        
+    </script>
+</body>
+</html>
+<!-- 
+Evento de Mouse em DIV: 
+    - mouseenter: mouse entra dentro da região da div
+    - mousemove: mouse se movendo dentro da região da div
+    - mousedown: mouse clica e segura dentro da região da div
+    - mouseup: mouse solta o clique dentro da região da div
+    - click: mouse faz clica dentro da região da div
+    - mouseout: mousa sai da região da div
+-->
+<!--
+Função em Javascript:
+conjunto de linhas que serão executadas quando o evento ocorrer
+    - Bloco: conjunto de linhas
+    - O Bloco fica dentro de uma function: function { bloco }
+    - Os nomes da funções são ações que queremos que ela faça, exemplo: function ação(){ bloco }
+
+addEventListener()
+    - Substitui o function ação(){ bloco } dentro do código. ficando assim: a.addEventListener('click', clicar). 'click' = evento DOM/function | clicar  = ação. 
+-->
